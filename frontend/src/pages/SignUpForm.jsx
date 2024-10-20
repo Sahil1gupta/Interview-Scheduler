@@ -29,7 +29,7 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/signup', formData);
+      const res = await axios.post('https://interview-scheduler-45dd.onrender.com/api/auth/signup', formData);
 
       if (res.data.msg) {
         toast.success('OTP sent successfully!', {

@@ -46,7 +46,7 @@ const JobPost = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/api/job/job', jobData, {
+      await axios.post('https://interview-scheduler-45dd.onrender.com/api/job/job', jobData, {
         headers: { Authorization: `${token}` }, // Include token in request headers
       });
       toast.success('Job posted and emails sent!', {

@@ -12,7 +12,7 @@ const OtpVerification = () => {
 
   const handleEmailVerify = async () => {
     try {
-      const res = await axios.post('http://localhost:3000/api/auth/verify-otp', { email, otp: emailOtp });
+      const res = await axios.post('https://interview-scheduler-45dd.onrender.com/api/auth/verify-otp', { email, otp: emailOtp });
       if (res.data.token) {
         localStorage.setItem('token', res.data.token); // Store JWT
         toast.success(res.data.msg || 'Email verified', {
